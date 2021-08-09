@@ -23,6 +23,13 @@ DEBUG = True
 # all hosts
 ALLOWED_HOSTS = ['*']
 
+# ALLOWED_HOSTS = [
+#         "127.0.0.1",
+#         "localhost",
+#         "[::1]",
+#         "testserver",
+# ]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -31,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'apps.core.apps.ShopConfig',
+    'apps.shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
