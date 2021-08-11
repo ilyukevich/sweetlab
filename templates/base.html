@@ -8,19 +8,22 @@
 </head>
 <body>
   <div id="header">
-    <a href="/" class="logo">SweetLab SHOP</a>
+<!--    <a href="/" class="logo"><H1>SweetLAB</H1></a> Telegram|Viber, консультация 24/7: +375-xx-xxx-xx-xx (A1/Velcom), +375-xx-xxx-xx-xx (Life) | Время работы: пн-вс 9:00 - 23:00-->
+    <a href="/" class="logo"><img src="{% static 'img/atom_96224.svg' %}"><b>SweetLAB</b></a>
+    <b>Telegram|Viber, консультация 24/7: +375-xx-xxx-xx-xx (A1/Velcom), +375-xx-xxx-xx-xx (Life) | Время работы: пн-вс 9:00 - 23:00 </b>
+    <p> <i>Sweetlab.by - это интернет-магазин, в котором вы найдете всевозможные вкусняшки, напитки и сладости со всех стран мира!</i></p>
   </div>
   <div id="subheader">
     <div class="cart">
       {% with total_items=cart|length %}
           {% if cart|length > 0 %}
-            Your cart:
+            Ваша корзина:
             <a href="{% url "cart:cart_detail" %}">
               {{ total_items }} item{{ total_items|pluralize }},
               ${{ cart.get_total_price }}
             </a>
           {% else %}
-            Your cart is empty.
+            Ваша корзина пуста.
           {% endif %}
         {% endwith %}
     </div>
